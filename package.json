@@ -1,0 +1,71 @@
+{
+  "name": "jest-test",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:prod": "ng build --prod",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "verbose": false,
+    "testMatch": [
+      "**/client/**/*.spec.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "./jest.setup.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "./tsconfig.json",
+        "stringifyContentPathRegex": "\\.html$",
+        "astTransformers": [
+          "jest-preset-angular/InlineHtmlStripStylesTransformer"
+        ],
+        "diagnostics": false
+      }
+    }
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~7.2.0",
+    "@angular/common": "~7.2.0",
+    "@angular/compiler": "~7.2.0",
+    "@angular/core": "^7.2.0",
+    "@angular/elements": "^7.2.0",
+    "@angular/forms": "~7.2.0",
+    "@angular/platform-browser": "~7.2.0",
+    "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/router": "~7.2.0",
+    "ajv": "^6.9.1",
+    "core-js": "^2.5.4",
+    "document-register-element": "~1.8.1",
+    "rxjs": "~6.3.3",
+    "zone.js": "~0.8.26"
+  },
+  "devDependencies": {
+    "@angular-builders/jest": "^7.4.4",
+    "@angular-devkit/build-angular": "~0.13.2",
+    "@angular-devkit/build-ng-packagr": "~0.13.2",
+    "@angular/cli": "~7.2.4",
+    "@angular/compiler-cli": "~7.2.0",
+    "@angular/language-service": "~7.2.0",
+    "@ngneat/spectator": "^4.5.0",
+    "@types/jest": "^24.0.19",
+    "@types/node": "~8.9.4",
+    "codelyzer": "~4.5.0",
+    "jest": "^24.9.0",
+    "jest-preset-angular": "^7.1.1",
+    "ng-mocks": "^8.1.0",
+    "ng-packagr": "^4.2.0",
+    "ts-node": "~7.0.0",
+    "tsickle": ">=0.34.0",
+    "tslib": "^1.9.0",
+    "tslint": "~5.11.0",
+    "typescript": "~3.2.2"
+  }
+}
